@@ -6,7 +6,7 @@
 Settings *settings = nullptr;
 Game *game = nullptr;
 int main() {
-    InitWindow(500, 500, "Settings");
+    InitWindow(500, 400, "Settings");
     settings = new Settings();
     game = new Game;
     SetTargetFPS(60);

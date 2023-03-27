@@ -8,7 +8,12 @@
 
 class Settings {
 private:
-    Rectangle btnBounds = {200, 400, 100, 50};;
+    static int settedWidth;
+    static int settedHeight;
+    Rectangle btnBounds = {200, 300, 100, 50};
+    Rectangle widthAreaBounds = {300, 95, 100, 40};
+    Rectangle heightAreaBounds = {300, 165, 100, 40};
+    void drawFields();
 public:
     Settings();
     ~Settings();
