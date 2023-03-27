@@ -12,6 +12,7 @@ int main() {
     SetTargetFPS(60);
     while (settings->isRunning && !WindowShouldClose())
     {
+        settings->render();
         settings->update();
     }
     settings->clean();

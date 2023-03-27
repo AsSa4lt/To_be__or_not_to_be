@@ -67,6 +67,13 @@ build CMakeFiles/To_be__or_not_to_be.dir/Game.cpp.o: CXX_COMPILER__To_be__or_not
   OBJECT_DIR = CMakeFiles/To_be__or_not_to_be.dir
   OBJECT_FILE_DIR = CMakeFiles/To_be__or_not_to_be.dir
 
+build CMakeFiles/To_be__or_not_to_be.dir/Collision.cpp.o: CXX_COMPILER__To_be__or_not_to_be_Debug /Users/rostyslav/Desktop/C++$ coding/To$ be,$ or$ not$ to$ be/Collision.cpp || cmake_object_order_depends_target_To_be__or_not_to_be
+  DEP_FILE = CMakeFiles/To_be__or_not_to_be.dir/Collision.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/opt/homebrew/Cellar/raylib/4.5.0/include
+  OBJECT_DIR = CMakeFiles/To_be__or_not_to_be.dir
+  OBJECT_FILE_DIR = CMakeFiles/To_be__or_not_to_be.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target To_be__or_not_to_be
@@ -75,7 +82,7 @@ build CMakeFiles/To_be__or_not_to_be.dir/Game.cpp.o: CXX_COMPILER__To_be__or_not
 #############################################
 # Link the executable To_be__or_not_to_be
 
-build To_be__or_not_to_be: CXX_EXECUTABLE_LINKER__To_be__or_not_to_be_Debug CMakeFiles/To_be__or_not_to_be.dir/main.cpp.o CMakeFiles/To_be__or_not_to_be.dir/Settings.cpp.o CMakeFiles/To_be__or_not_to_be.dir/Game.cpp.o | /opt/homebrew/Cellar/raylib/4.5.0/lib/libraylib.dylib
+build To_be__or_not_to_be: CXX_EXECUTABLE_LINKER__To_be__or_not_to_be_Debug CMakeFiles/To_be__or_not_to_be.dir/main.cpp.o CMakeFiles/To_be__or_not_to_be.dir/Settings.cpp.o CMakeFiles/To_be__or_not_to_be.dir/Game.cpp.o CMakeFiles/To_be__or_not_to_be.dir/Collision.cpp.o | /opt/homebrew/Cellar/raylib/4.5.0/lib/libraylib.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
   LINK_LIBRARIES = /opt/homebrew/Cellar/raylib/4.5.0/lib/libraylib.dylib
   OBJECT_DIR = CMakeFiles/To_be__or_not_to_be.dir
