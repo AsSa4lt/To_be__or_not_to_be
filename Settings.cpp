@@ -6,6 +6,7 @@
 #include "raylib.h"
 #include "iostream"
 #include "Collision.h"
+#include "Game.h"
 
 int Settings::settedHeight = 640;
 int Settings::settedWidth = 800;
@@ -36,7 +37,10 @@ void Settings::render() {
     DrawText("Set screen width and height", 5, 10, 35, WHITE);
     ClearBackground(GRAY);
     drawFields();
-    DrawRectangleV(Vector2 {btnBounds.x, btnBounds.y}, Vector2 {btnBounds.width, btnBounds.height} ,WHITE);
+    if(isOnButton)
+        DrawRectangleV(Vector2 {btnBounds.x, btnBounds.y}, Vector2 {btnBounds.width, btnBounds.height} ,RED);
+    else
+        DrawRectangleV(Vector2 {btnBounds.x, btnBounds.y}, Vector2 {btnBounds.width, btnBounds.height} ,WHITE);
     DrawText("Start", 215, 315, 28, BLACK);
     EndDrawing();
 }
@@ -44,7 +48,14 @@ void Settings::render() {
 void Settings::checkCompleteSettings() {
     Vector2 mousePoint = GetMousePosition();
     if (Collision::isCollisionPointRectangle(mousePoint, btnBounds) && (IsMouseButtonDown(MOUSE_BUTTON_LEFT))) {
-        std::cout << "Collision";
+        Game::height = settedHeight;
+        Game::width = settedHeight;
+        isRunning = false;
+    }
+    if (Collision::isCollisionPointRectangle(mousePoint, btnBounds)) {
+        isOnButton = true;
+    }else{
+        isOnButton = false;
     }
 }
 
